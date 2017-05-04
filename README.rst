@@ -26,7 +26,9 @@ This is easily achieved by downloading
 Usage Example
 =============
 
-This example generates one wavelength of a 440hz sine wave when played at 16 kilosamples per second::
+This example generates one wavelength of a 440hz sine wave when played at 16 kilosamples per second:
+
+.. code-block:: python
 
     from adafruit_waveform import sine
     wave = sine.sine_wave(16000, 440)
