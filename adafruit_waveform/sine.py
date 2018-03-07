@@ -20,10 +20,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 """
-`adafruit_waveform`
+`adafruit_waveform.sine`
 ====================================================
 
-TODO(description)
+This library generates sine waveforms that can be used to generate
+sine audio signals.
 
 * Author(s): Scott Shawcroft
 """

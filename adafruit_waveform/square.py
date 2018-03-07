@@ -20,10 +20,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 """
-`adafruit_waveform`
+`adafruit_waveform.square`
 ====================================================
 
-TODO(description)
+This library generates squard waveforms that can be used to generate
+squard audio signals.
 
 * Author(s): Scott Shawcroft, BrentRu
 """
