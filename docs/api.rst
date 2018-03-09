@@ -3,3 +3,7 @@
 
 .. automodule:: adafruit_waveform.sine
    :members:
+
+.. automodule:: adafruit_waveform.square
+   :members:
+
