@@ -1,32 +1,32 @@
-# This is a common .travis.yml for generating library release zip files for
-# CircuitPython library releases using circuitpython-build-tools.
-# See https://github.com/adafruit/circuitpython-build-tools for detailed setup
-# instructions.
-
 dist: trusty
 sudo: false
 language: python
 python:
-    - "3.6"
-
+- '3.6'
 cache:
-    pip: true
-
+  pip: true
 deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
+- provider: releases
+  api_key: "$GITHUB_TOKEN"
   file_glob: true
-  file: $TRAVIS_BUILD_DIR/bundles/*
+  file: "$TRAVIS_BUILD_DIR/bundles/*"
   skip_cleanup: true
   overwrite: true
   on:
     tags: true
-
+- provider: pypi
+  user: adafruit-travis
+  on:
+    tags: true
+  password:
+    secure: gMixsDzcQyQz0MQwvDLGMr5dfIiuIU7MDtHZwyFdwo1SJx7fgCpwCjjCnHmPuEAanpim5BJCwBF1nRSPfWUTBoIQvPDCBcfwQkJZk00seqvoLhaiZ2+Y/ZwZ5yoFNTTjwR/X132TCm/CNQyaITMLt1uDBgL8LaKIiYnBSrX+PxzA5yKpaOws85j8wS4oxQ5Jne1BLA0FnsWDx/hU12J33JD9HCyZK+jUcntobADi3X2osay6SuoKzTzYOEkQrRa8sRKcGnFpAZnUJu/b5glAoOWRdP4dKhntrX8JO/trGRcYVt/C7VgAPX2ed1b4m48D6FO7L0E103AdbnOz1mEvH6BMAvWWTP6njlFKhIEqUQE0ukd5lKdwHfDaTTm20obrODvpOkoAzsIodKRwHVD3wrTHTjX/AqugyivtsnZbTd6G7ea/RTKJq/ZUeKivAHnaXXdV9Iy+kPn5RX8BbkW+nfLHb67Btc5frt2lyUcYnS+LQRpOfJYRSA5x0XtyO4dta8Pp2TI6cmsL0Qlem7LyvdZVEPj7717/zVOlYr6xYMfHni/4VIheJYfe3+3srovJGVKBlBZJFdpNbnXKrc1o7RDRLJ/pEi3URpL5YvaAZBkYOVOyhx3+hSUULCOEyDdD8EWKaQbG10jl7F7w6m+2oNr/lvt0sDYbEC5dKULzB4w=
 install:
-  - pip install pylint circuitpython-build-tools Sphinx sphinx-rtd-theme
-
+- pip install -r requirements.txt
+- pip install pylint circuitpython-build-tools Sphinx sphinx-rtd-theme
+- pip install --force-reinstall pylint==1.9.2
 script:
-  - pylint adafruit_waveform/*.py
-  - ([[ ! -d "examples" ]] || pylint --disable=missing-docstring,invalid-name examples/*.py)
-  - circuitpython-build-bundles --filename_prefix adafruit-circuitpython-waveform --library_location .
-  - cd docs && sphinx-build -E -W -b html . _build/html
+- pylint adafruit_waveform/*.py
+- ([[ ! -d "examples" ]] || pylint --disable=missing-docstring,invalid-name examples/*.py)
+- circuitpython-build-bundles --filename_prefix adafruit-circuitpython-waveform --library_location
+  .
+- cd docs && sphinx-build -E -W -b html . _build/html && cd ..
