@@ -31,6 +31,9 @@ squard audio signals.
 
 import array
 
+__version__ = "0.0.0-auto.0"
+__repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_Waveform.git"
+
 
 def square_wave(sample_length=2):
     """Generate a single square wave of sample_length size"""

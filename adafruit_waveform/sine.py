@@ -32,6 +32,10 @@ sine audio signals.
 import array
 import math
 
+__version__ = "0.0.0-auto.0"
+__repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_Waveform.git"
+
+
 def sine_wave(sample_frequency, pitch):
     """Generate a single sine wav cycle at the given sampling frequency and pitch."""
     length = int(sample_frequency / pitch)
