@@ -10,8 +10,8 @@ Introduction
     :target: https://discord.gg/nBQh6qu
     :alt: Discord
 
-.. image:: https://travis-ci.com/adafruit/Adafruit_CircuitPython_Waveform.svg?branch=master
-    :target: https://travis-ci.com/adafruit/Adafruit_CircuitPython_Waveform
+.. image:: https://github.com/adafruit/Adafruit_CircuitPython_Waveform/workflows/Build%20CI/badge.svg
+    :target: https://github.com/adafruit/Adafruit_CircuitPython_Waveform/actions/
     :alt: Build Status
 
 This library generates simple waveforms that can be used to generate different
