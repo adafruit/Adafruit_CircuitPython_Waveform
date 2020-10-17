@@ -41,5 +41,5 @@ def sine_wave(sample_frequency, pitch):
     length = int(sample_frequency / pitch)
     b = array.array("H", [0] * length)
     for i in range(length):
-        b[i] = int(math.sin(math.pi * 2 * i / length) * (2 ** 15) + 2 ** 15)
+        b[i] = int(math.sin(math.pi * 2 * i / length) * ((2 ** 15) - 1) + 2 ** 15)
     return b
