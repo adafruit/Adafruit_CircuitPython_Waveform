@@ -6,4 +6,3 @@
 
 .. automodule:: adafruit_waveform.square
    :members:
-
