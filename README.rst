@@ -61,6 +61,11 @@ This example generates one wavelength of a 440hz sine wave when played at 16 kil
     from adafruit_waveform import sine
     wave = sine.sine_wave(16000, 440)
 
+Documentation
+=============
+
+API documentation for this library can be found on `Read the Docs <https://circuitpython.readthedocs.io/projects/waveform/en/latest/>`_.
+
 Contributing
 ============
 
