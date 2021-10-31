@@ -18,7 +18,7 @@ __version__ = "0.0.0-auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_Waveform.git"
 
 
-def square_wave(sample_length=2):
+def square_wave(sample_length: int = 2):
     """Generate a single square wave of sample_length size"""
     square = array.array("H", [0] * sample_length)
     for i in range(sample_length // 2):
