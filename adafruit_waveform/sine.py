@@ -19,7 +19,7 @@ __version__ = "0.0.0-auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_Waveform.git"
 
 
-def sine_wave(sample_frequency, pitch):
+def sine_wave(sample_frequency: float, pitch: float):
     """Generate a single sine wav cycle at the given sampling frequency and pitch."""
     length = int(sample_frequency / pitch)
     b = array.array("H", [0] * length)
