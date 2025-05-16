@@ -7,9 +7,12 @@
 =================================================
 toggles the builtin LED using a sine wave
 """
+
 import time
+
 import board
 import digitalio
+
 from adafruit_waveform import sine
 
 LED = digitalio.DigitalInOut(board.D13)
