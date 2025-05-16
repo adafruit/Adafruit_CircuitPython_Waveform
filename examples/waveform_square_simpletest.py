@@ -7,9 +7,12 @@
 =================================================
 toggles the builtin LED using a square wave
 """
+
 import time
-import digitalio
+
 import board
+import digitalio
+
 from adafruit_waveform import square
 
 LED = digitalio.DigitalInOut(board.D13)
